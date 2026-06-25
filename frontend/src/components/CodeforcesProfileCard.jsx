@@ -1,6 +1,7 @@
 import StatCard from "./StatCard";
 import RatingHistoryChart from "./RatingHistoryChart";
 import ContestStats from "./ContestStats";
+import AIChatbot from "./AIChatbot";
 
 function CodeforcesProfileCard({
     profile,
@@ -79,7 +80,8 @@ function CodeforcesProfileCard({
                 history={history}
                 darkMode={darkMode}
             />
-
+            <AIChatbot 
+             darkMode={darkMode}/>
         </div>
     );
 }

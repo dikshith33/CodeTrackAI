@@ -5,12 +5,14 @@ const API = axios.create({
 });
 
 export const getLeetCodeProfile = async (username) => {
+
     const response = await API.get(
         `/api/profile/leetcode/${username}`
     );
 
     return response.data;
 };
+
 export const getCodeforcesProfile = async (
     username
 ) => {
@@ -21,12 +23,28 @@ export const getCodeforcesProfile = async (
 
     return response.data;
 };
+
 export const getCodeforcesHistory =
 async (username) => {
 
     const response = await API.get(
         `/api/profile/codeforces/${username}/history`
     );
+
+    return response.data;
+};
+
+export const askAI = async (
+    question
+) => {
+
+    const response =
+        await API.post(
+            "/api/ai/chat",
+            {
+                question
+            }
+        );
 
     return response.data;
 };

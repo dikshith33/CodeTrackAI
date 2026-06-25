@@ -3,6 +3,9 @@ import DifficultyChart from "./DifficultyChart";
 import DifficultyBarChart from "./DifficultyBarChart";
 import TopicChart from "./TopicChart";
 import Recommendations from "./Recommendations";
+import AIChatbot
+    from "./AIChatbot";
+
 
 function ProfileCard({
     profile,
@@ -116,7 +119,8 @@ function ProfileCard({
                 recommendations={profile.recommendations}
                 darkMode={darkMode}
             />
-
+            <AIChatbot 
+             darkMode={darkMode}/>
         </div>
     );
 }
